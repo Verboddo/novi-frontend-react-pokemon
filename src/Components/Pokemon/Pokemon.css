@@ -1,0 +1,24 @@
+.pokemon-container {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #353531;
+    color: #EC4E20;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+}
+
+.abilities-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.abilities {
+    padding: 2px 15px;
+    border-style: groove;
+}

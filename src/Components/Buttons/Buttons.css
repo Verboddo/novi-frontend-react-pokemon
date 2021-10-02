@@ -1,0 +1,12 @@
+.button {
+    background-color: blue;
+    color: white;
+    margin: 5px;
+    padding: 2px 15px;
+    border-style: solid;
+    border-color: black;
+}
+
+.button:disabled {
+    background-color: gray;
+}
