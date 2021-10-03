@@ -26,7 +26,11 @@ function Pokemons({ children }) {
             setPokemonWeight(pokemonWeight)
 
             const pokemonAbilities = pokemon.data.abilities
-            const allPokemonAbilities = pokemonAbilities.map((ability) => <p className="abilities">{ability.ability.name}</p>)
+            // Als ik hieronder een key plaats op het <p> element omdat alles in een lijst een eigen key nodig heeft
+            // Dan wordt er een dubbele key aangemaakt en er word verwezen naar deze <p> element en een <div> element
+            // in de App.js (zie comments)
+            // Waar ga ik de fout in met de useStates?
+            const allPokemonAbilities = pokemonAbilities.map((ability) => <p key={pokemon.data.id} className="abilities">{ability.ability.name}</p>)
             setPokemonAbilities(allPokemonAbilities)
         }
 

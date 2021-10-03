@@ -11,6 +11,7 @@ function NextButton({children, setOffSet, offSet}) {
             className="button"
             type='click'
             onClick={handleClick}
+            // Nu heb ik disabled omdat ik het eind nummer weet, hoe krijg ik dit dynamisch?
             disabled={offSet >= 1100}
         >
             {children}</button>

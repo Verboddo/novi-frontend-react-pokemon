@@ -21,16 +21,26 @@ function App() {
 
             console.log(pokemonList)
         }
+
         testData()
-    },[offSet])
+    }, [offSet])
 
 
     return (
         <>
             <div className="button-container">
-            <PreviousButton setOffSet={setOffSet} offSet={offSet}>Vorige</PreviousButton>
-            <NextButton setOffSet={setOffSet} offSet={offSet}>Volgende</NextButton>
+                <PreviousButton setOffSet={setOffSet} offSet={offSet}>Vorige</PreviousButton>
+                <NextButton setOffSet={setOffSet} offSet={offSet}>Volgende</NextButton>
             </div>
+            {/*Er wordt ook verwezen naar de <div> element hieronder
+            Het lijkt er dus op dat alles 2x gerenderd wordt: zie foutmelding hieronder van de console:
+            Warning: Encountered two children with the same key, `52`. Keys should be unique so that components maintain their identity across updates.
+            Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at div
+    at Pokemons (http://localhost:3000/static/js/main.chunk.js:807:3)
+    at div
+    at App (http://localhost:3000/static/js/main.chunk.js:200:87)*/}
             <div>{pokemon}</div>
         </>
     );
