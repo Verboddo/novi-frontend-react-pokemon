@@ -9,5 +9,10 @@ body {
 }
 
 .container {
-    width: 120px;
+    margin-top:20px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
 }
